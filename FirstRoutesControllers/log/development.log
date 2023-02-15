@@ -123,3 +123,95 @@ Processing by UsersController#index as */*
 Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 145)
 
 
+Started GET "/users?fav_food=pizza" for ::1 at 2023-02-15 16:27:42 -0500
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+Started GET "/users?fav_food=pizza" for ::1 at 2023-02-15 16:27:56 -0500
+Processing by UsersController#index as HTML
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:31:42 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2023-02-15 16:33:34 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 245)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:33:54 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 154)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:34:03 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 103)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:34:11 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:34:12 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:34:35 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:36:01 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:36:11 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:36:25 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:36:30 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:38:02 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:38:07 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:38:51 -0500
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizz"}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 156)
+
+
+Started POST "/users" for ::1 at 2023-02-15 16:38:56 -0500
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 106)
+
+
