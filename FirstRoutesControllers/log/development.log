@@ -417,3 +417,9 @@ Processing by UsersController#create as */*
 Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 210)
 
 
+Started POST "/users?some_category[a_key]=[FILTERED]&some_category[a_second_key]=[FILTERED]&some_category[inner_inner_hash][key]=value&something_else=aaahhhhh%27" for ::1 at 2023-02-15 17:07:01 -0500
+Processing by UsersController#create as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]", "a_second_key"=>"[FILTERED]", "inner_inner_hash"=>{"key"=>"value"}}, "something_else"=>"aaahhhhh'"}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 147)
+
+
