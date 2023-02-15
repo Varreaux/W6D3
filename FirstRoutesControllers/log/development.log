@@ -27,3 +27,99 @@ ActionController::RoutingError - uninitialized constant UsersController
             ^^^^^:
 
 Started POST "/__better_errors/14503c7d1d302aa1/variables" for ::1 at 2023-02-15 15:30:51 -0500
+Started GET "/users" for ::1 at 2023-02-15 16:11:37 -0500
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/" for ::1 at 2023-02-15 16:12:02 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/morganwaddington/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/morganwaddington/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 522)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2524)
+
+
+Started GET "/" for ::1 at 2023-02-15 16:12:27 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/morganwaddington/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/morganwaddington/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 278)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 917)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:14:19 -0500
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2023-02-15 16:15:35 -0500
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2023-02-15 16:18:09 -0500
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (Allocations: 224)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:19:07 -0500
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 651)
+
+
+
+ActionController::MissingExactTemplate - UsersController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/7d7b764c3d1c9e09/variables" for ::1 at 2023-02-15 16:19:07 -0500
+Started GET "/users" for ::1 at 2023-02-15 16:20:24 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 542)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:20:45 -0500
+Processing by UsersController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 157)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:21:00 -0500
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (Allocations: 133)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:21:23 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 8)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 437)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:22:01 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 160)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:22:04 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 145)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:22:05 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 145)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:22:07 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 145)
+
+
