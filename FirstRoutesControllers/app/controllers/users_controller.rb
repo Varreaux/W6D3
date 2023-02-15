@@ -7,9 +7,11 @@ class UsersController < ApplicationController
 
 
     def create
-        render json: params
+        render json: params #['some_category']
     end
 
-
+    def show
+        render json: params
+    end
 
 end

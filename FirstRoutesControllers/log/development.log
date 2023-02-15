@@ -215,3 +215,205 @@ Processing by UsersController#create as */*
 Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 106)
 
 
+Started GET "/users/2" for ::1 at 2023-02-15 16:44:20 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:45:17 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:45:20 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-02-15 16:45:37 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-02-15 16:45:40 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/" for ::1 at 2023-02-15 16:45:46 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/" for ::1 at 2023-02-15 16:45:48 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/" for ::1 at 2023-02-15 16:46:16 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/945cdda6ebf6a9b6/variables" for ::1 at 2023-02-15 16:46:17 -0500
+Started GET "/users" for ::1 at 2023-02-15 16:46:48 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/users" for ::1 at 2023-02-15 16:46:55 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: FirstRoutesControllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+  [1m[35m (380.0ms)[0m  [1m[35mCREATE DATABASE "FirstRoutesControllers_development" ENCODING = 'unicode'[0m
+  [1m[35m (173.3ms)[0m  [1m[35mCREATE DATABASE "FirstRoutesControllers_test" ENCODING = 'unicode'[0m
+Started POST "/users" for ::1 at 2023-02-15 16:48:33 -0500
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:48:53 -0500
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "id"=>"2"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3059)
+
+
+
+NoMethodError - undefined method `redner' for #<UsersController:0x00000000004150>
+        redner json: params
+        ^^^^^^
+Did you mean?  render:
+  app/controllers/users_controller.rb:14:in `show'
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:49:06 -0500
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:49:17 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 112)
+
+
+Started GET "/users/2" for ::1 at 2023-02-15 16:49:29 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started POST "/users/2" for ::1 at 2023-02-15 16:49:45 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+Started GET "/users/2" for ::1 at 2023-02-15 16:49:49 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 155)
+
+
+Started GET "/users?some_category[a_key]=[FILTERED]&some_category[a_second_key]=[FILTERED]&some_category[inner_inner_hash][key]=value&something_else=aaahhhhh%27" for ::1 at 2023-02-15 16:51:49 -0500
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]", "a_second_key"=>"[FILTERED]", "inner_inner_hash"=>{"key"=>"value"}}, "something_else"=>"aaahhhhh'"}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 10)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 552)
+
+
+Started GET "/" for ::1 at 2023-02-15 16:52:05 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | Allocations: 284)
+Completed 200 OK in 43ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 999)
+
+
+Started GET "/" for ::1 at 2023-02-15 16:58:24 -0500
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 281)
+Completed 200 OK in 5ms (Views: 3.2ms | Allocations: 938)
+
+
+Started GET "/" for ::1 at 2023-02-15 16:59:38 -0500
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+  Rendering /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/yong/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 221)
+
+
+Started GET "/users" for ::1 at 2023-02-15 16:59:44 -0500
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 2.0ms | Allocations: 360)
+
+
+Started POST "/users" for ::1 at 2023-02-15 17:00:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 147)
+
+
+Started POST "/users" for ::1 at 2023-02-15 17:01:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 199)
+
+
+Started POST "/users" for ::1 at 2023-02-15 17:02:04 -0500
+Processing by UsersController#create as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 96)
+
+
+Started POST "/users" for ::1 at 2023-02-15 17:02:10 -0500
+Processing by UsersController#create as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]"}}
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 210)
+
+
