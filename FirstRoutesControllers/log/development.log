@@ -1656,3 +1656,393 @@ Processing by ArtworksController#index as */*
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 1001)
 
 
+Started GET "/artwork_shares" for ::1 at 2023-02-16 16:52:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artwork_shares"):
+  
+Started GET "/artwork_share" for ::1 at 2023-02-16 16:53:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artwork_share"):
+  
+Started GET "/artwork_shares" for ::1 at 2023-02-16 16:53:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/artwork_shares"):
+  
+Started GET "/artwork_shares" for ::1 at 2023-02-16 16:53:39 -0500
+
+AbstractController::ActionNotFound - The action 'index' could not be found for ArtworkSharesController:
+
+Started GET "/artwork_shares" for ::1 at 2023-02-16 16:53:56 -0500
+Processing by ArtworkSharesController#index as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}}
+Completed 500 Internal Server Error in 7ms (Allocations: 2481)
+
+
+
+NameError - uninitialized constant ArtworkSharesController::ArtworkShares
+        @artwork_shares = ArtworkShares.all
+                          ^^^^^^^^^^^^^:
+  app/controllers/artwork_shares_controller.rb:3:in `index'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=3&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 16:56:12 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"3", "viewer_id"=>"1"}}
+Completed 500 Internal Server Error in 10ms (Allocations: 2419)
+
+
+
+NameError - uninitialized constant ArtworkSharesController::ArtworkShares
+        artwork_share = ArtworkShares.new(artwork_share_params)
+                        ^^^^^^^^^^^^^:
+  app/controllers/artwork_shares_controller.rb:8:in `create'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=3&artwork_shares[viewer_id]=9" for ::1 at 2023-02-16 16:57:37 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"3", "viewer_id"=>"9"}}
+Completed 500 Internal Server Error in 12ms (Allocations: 2413)
+
+
+
+NameError - uninitialized constant ArtworkSharesController::ArtworkShares
+        artwork_share = ArtworkShares.new(artwork_share_params)
+                        ^^^^^^^^^^^^^:
+  app/controllers/artwork_shares_controller.rb:8:in `create'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=3&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 16:58:43 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"3", "viewer_id"=>"1"}}
+Completed 400 Bad Request in 7ms (Allocations: 1654)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: artwork_share
+Did you mean?  artwork_shares:
+  app/controllers/artwork_shares_controller.rb:28:in `artwork_share_params'
+  app/controllers/artwork_shares_controller.rb:8:in `create'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=3&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 16:59:18 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"3", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 LIMIT $2[0m  [["artwork_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."viewer_id" = $1 LIMIT $2[0m  [["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (6.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 136ms (Views: 0.6ms | ActiveRecord: 41.1ms | Allocations: 22122)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=4&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:00:24 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"4", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 LIMIT $2[0m  [["artwork_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."viewer_id" = $1 LIMIT $2[0m  [["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (1.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 39ms (Views: 0.2ms | ActiveRecord: 13.7ms | Allocations: 5521)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=3&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:00:42 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"3", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 LIMIT $2[0m  [["artwork_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."viewer_id" = $1 LIMIT $2[0m  [["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (2.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 36ms (Views: 0.2ms | ActiveRecord: 13.6ms | Allocations: 5422)
+
+
+Started GET "/users" for ::1 at 2023-02-16 17:01:46 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 1.8ms | Allocations: 1508)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=6" for ::1 at 2023-02-16 17:02:28 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"6"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 LIMIT $2[0m  [["artwork_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."viewer_id" = $1 LIMIT $2[0m  [["viewer_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (1.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 35ms (Views: 0.3ms | ActiveRecord: 9.5ms | Allocations: 6006)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=6" for ::1 at 2023-02-16 17:05:03 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"6"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (4.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Create (1.5ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 6], ["created_at", "2023-02-16 22:05:03.514221"], ["updated_at", "2023-02-16 22:05:03.514221"]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 200 OK in 172ms (Views: 1.4ms | ActiveRecord: 26.0ms | Allocations: 17856)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=6" for ::1 at 2023-02-16 17:05:11 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"6"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 37ms (Views: 0.3ms | ActiveRecord: 7.9ms | Allocations: 4723)
+
+
+Started GET "/artwork_shares" for ::1 at 2023-02-16 17:10:20 -0500
+Processing by ArtworkSharesController#index as */*
+  [1m[36mArtworkShare Load (0.3ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares"[0m
+  ↳ app/controllers/artwork_shares_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 20.4ms | ActiveRecord: 6.7ms | Allocations: 4010)
+
+
+Started DELETE "/artwork_shares/4" for ::1 at 2023-02-16 17:11:26 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "id"=>"4"}
+  [1m[36mArtworkShare Load (0.9ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mArtworkShare Destroy (2.0ms)[0m  [1m[31mDELETE FROM "artwork_shares" WHERE "artwork_shares"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 10.3ms | Allocations: 3018)
+
+
+Started GET "/artwork_shares" for ::1 at 2023-02-16 17:11:36 -0500
+Processing by ArtworkSharesController#index as */*
+  [1m[36mArtworkShare Load (0.7ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares"[0m
+  ↳ app/controllers/artwork_shares_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms | Allocations: 924)
+
+
+Started POST "/artwork_shares/4?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:14:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/artwork_shares/4"):
+  
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:14:39 -0500
+
+SyntaxError - syntax error, unexpected '\n', expecting =>
+...ares destroyed", @artwork_share
+...                               ^:
+  app/controllers/artwork_shares_controller.rb:19:in `'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:15:02 -0500
+
+SyntaxError - syntax error, unexpected instance variable, expecting `end'
+...hares destroyed" @artwork_share
+...                 ^~~~~~~~~~~~~~:
+  app/controllers/artwork_shares_controller.rb:19:in `'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:15:27 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (4.8ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Create (1.4ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 1], ["created_at", "2023-02-16 22:15:27.386149"], ["updated_at", "2023-02-16 22:15:27.386149"]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 201 Created in 192ms (Views: 0.7ms | ActiveRecord: 56.8ms | Allocations: 17929)
+
+
+Started DELETE "/artwork_shares/5" for ::1 at 2023-02-16 17:16:27 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mArtworkShare Load (0.7ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mArtworkShare Destroy (1.6ms)[0m  [1m[31mDELETE FROM "artwork_shares" WHERE "artwork_shares"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 2928)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:18:00 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Create (1.0ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 1], ["created_at", "2023-02-16 22:18:00.968712"], ["updated_at", "2023-02-16 22:18:00.968712"]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 201 Created in 180ms (Views: 2.0ms | ActiveRecord: 22.2ms | Allocations: 17865)
+
+
+Started DELETE "/artwork_shares/6" for ::1 at 2023-02-16 17:18:09 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mArtworkShare Load (0.4ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 1919)
+
+
+
+ArgumentError - When assigning attributes, you must pass a hash as an argument, String passed.:
+  app/controllers/artwork_shares_controller.rb:18:in `destroy'
+
+Started DELETE "/artwork_shares/6" for ::1 at 2023-02-16 17:19:29 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mArtworkShare Load (0.5ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+  [1m[36mArtworkShare Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artwork_shares" WHERE "artwork_shares"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+Completed 200 OK in 70ms (Views: 1.4ms | ActiveRecord: 14.4ms | Allocations: 5993)
+
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:20:02 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (12.4ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Create (1.0ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 1], ["created_at", "2023-02-16 22:20:02.994696"], ["updated_at", "2023-02-16 22:20:02.994696"]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 201 Created in 370ms (Views: 0.7ms | ActiveRecord: 51.5ms | Allocations: 17952)
+
+
+Started DELETE "/artwork_shares/7" for ::1 at 2023-02-16 17:20:08 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mArtworkShare Load (0.4ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+  [1m[36mArtworkShare Destroy (1.3ms)[0m  [1m[31mDELETE FROM "artwork_shares" WHERE "artwork_shares"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:19:in `destroy'
+Completed 500 Internal Server Error in 16ms (Views: 0.7ms | ActiveRecord: 5.4ms | Allocations: 3546)
+
+
+
+AbstractController::DoubleRenderError - Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".:
+  app/controllers/artwork_shares_controller.rb:21:in `destroy'
+
+Started POST "/artwork_shares?artwork_shares[artwork_id]=1&artwork_shares[viewer_id]=1" for ::1 at 2023-02-16 17:25:50 -0500
+Processing by ArtworkSharesController#create as */*
+  Parameters: {"user"=>{"name"=>"Morganm"}, "artwork_shares"=>{"artwork_id"=>"1", "viewer_id"=>"1"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "artwork_shares" WHERE "artwork_shares"."artwork_id" = $1 AND "artwork_shares"."viewer_id" = $2 LIMIT $3[0m  [["artwork_id", 1], ["viewer_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtwork Load (1.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mArtworkShare Create (3.2ms)[0m  [1m[32mINSERT INTO "artwork_shares" ("artwork_id", "viewer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["artwork_id", 1], ["viewer_id", 1], ["created_at", "2023-02-16 22:25:51.227602"], ["updated_at", "2023-02-16 22:25:51.227602"]]
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:9:in `create'
+Completed 201 Created in 118ms (Views: 1.0ms | ActiveRecord: 22.3ms | Allocations: 17860)
+
+
+Started DELETE "/artwork_shares/8" for ::1 at 2023-02-16 17:25:57 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mArtworkShare Load (1.6ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mArtworkShare Destroy (3.1ms)[0m  [1m[31mDELETE FROM "artwork_shares" WHERE "artwork_shares"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artwork_shares_controller.rb:18:in `destroy'
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 9.5ms | Allocations: 6157)
+
+
+
+NameError - undefined local variable or method `artwork_share' for #<ArtworkSharesController:0x00000000019d98>
+        message = "The following artwork share was destroyed: #{artwork_share}"
+                                                                ^^^^^^^^^^^^^
+Did you mean?  @artwork_share
+               artwork_share_url
+               artwork_url
+               artwork_path
+               artworks_url:
+  app/controllers/artwork_shares_controller.rb:19:in `destroy'
+
+Started DELETE "/artwork_shares/8" for ::1 at 2023-02-16 17:26:15 -0500
+Processing by ArtworkSharesController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mArtworkShare Load (1.3ms)[0m  [1m[34mSELECT "artwork_shares".* FROM "artwork_shares" WHERE "artwork_shares"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/artwork_shares_controller.rb:17:in `destroy'
+Completed 404 Not Found in 29ms (ActiveRecord: 6.2ms | Allocations: 3666)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find ArtworkShare with 'id'=8:
+  app/controllers/artwork_shares_controller.rb:17:in `destroy'
+
