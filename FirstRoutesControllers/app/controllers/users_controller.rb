@@ -43,6 +43,7 @@ class UsersController < ApplicationController
       end
     end
 
+    private 
     def user_params
       # debugger
       params.require(:user).permit(:username) #params[:chirp] => {body: "My new"}

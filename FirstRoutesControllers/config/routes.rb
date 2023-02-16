@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users, only: [:create, :destroy, :index, :show, :update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # Get "/users" to:"/users"
 
-
+  # except: [:new, :edit]
   # get '/users', to: 'users#index'
   # post '/users', to: 'users#create'
   # get '/users/new', to: 'users#new', as: 'new_user'
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # put '/users/:id', to: 'users#update'
   # delete '/users/:id', to: 'users#destroy'
 
-
+  resources :artworks, only: [:create, :destroy, :index, :show, :update]
 end
 
 
